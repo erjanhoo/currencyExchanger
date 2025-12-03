@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Currency Converter</h1>
+            <p class="subtitle">Check live rates, set rate alerts, receive notifications and more.</p>
+        </div>
+
+        <div class="converter-card">
+            <div class="input-section">
+                <label>Amount</label>
+                <div class="input-group">
+                    <div class="currency-selector" id="fromCurrencySelector">
+                        <img src="" alt="" class="flag-icon" id="fromFlag">
+                        <span id="fromCurrencyCode">USD</span>
+                        <svg class="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                            <path d="M1 1L6 6L11 1" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="custom-dropdown" id="fromDropdown">
+                        <!-- Options will be populated dynamically -->
+                    </div>
+                    <input type="number" id="fromAmount" class="amount-input" value="1000.00" step="0.01">
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="swap-button" id="swapButton">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7 10L12 15L17 10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M17 14L12 9L7 14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <button class="convert-button" id="convertButton">Convert</button>
+            </div>
+
+            <div class="input-section">
+                <label>Converted Amount</label>
+                <div class="input-group">
+                    <div class="currency-selector" id="toCurrencySelector">
+                        <img src="" alt="" class="flag-icon" id="toFlag">
+                        <span id="toCurrencyCode">SGD</span>
+                        <svg class="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                            <path d="M1 1L6 6L11 1" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="custom-dropdown" id="toDropdown">
+                        <!-- Options will be populated dynamically -->
+                    </div>
+                    <input type="number" id="toAmount" class="amount-input" value="0.00" readonly>
+                </div>
+            </div>
+
+            <div class="exchange-rate">
+                <label>Indicative Exchange Rate</label>
+                <p id="exchangeRate">1 USD = 1.36 SGD</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
